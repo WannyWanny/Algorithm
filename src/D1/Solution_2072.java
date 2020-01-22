@@ -1,3 +1,5 @@
+package D1;
+
 import java.util.Scanner;
 
 public class Solution_2072 {
@@ -11,13 +13,13 @@ public class Solution_2072 {
 			int[] arr = new int[10];
 			int sum  =  0;
 			
-			//10°³ÀÇ ¼ö ÀÔ·Â¹Þ±â
+			//10ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ô·Â¹Þ±ï¿½
 			for(int i=0; i<10; i++)		
 			{
 				arr[i] = sc.nextInt();
 			}
 			
-			//È¦¼ö¸¸ ÆÇº°ÇØ¼­ ´õÇÏÀÚ
+			//È¦ï¿½ï¿½ï¿½ï¿½ ï¿½Çºï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			for(int i=0; i<10; i++)
 			{
 				if(arr[i] % 2 != 0)

@@ -1,3 +1,5 @@
+package D1;
+
 import java.util.*;
 public class Solution_2050 {
 

@@ -1,13 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5797b994-c570-4d8b-8bcb-46225c6d5ca8" name="Default Changelist" comment="" />
+    <list default="true" id="5797b994-c570-4d8b-8bcb-46225c6d5ca8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/D2/Solution_1284.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/D2/Solution_1288.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/D2/Solution_1945.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/D2/Solution_1986.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Soltuion_1933.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/D1/Soltuion_1933.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Solution_1545.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/D1/Solution_1545.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Solution_1938.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/D1/Solution_1938.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Solution_2025.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/D1/Solution_2025.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Solution_2027.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/D1/Solution_2027.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Solution_2043.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/D1/Solution_2043.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Solution_2046.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/D1/Solution_2046.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Solution_2047.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/D1/Solution_2047.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Solution_2050.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/D1/Solution_2050.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Solution_2058.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/D1/Solution_2058.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Solution_2063.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/D1/Solution_2063.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Solution_2068.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/D1/Solution_2068.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Solution_2070.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/D1/Solution_2070.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Solution_2071.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/D1/Solution_2071.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Solution_2072.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/D1/Solution_2072.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1Wj8YhWEuOOI3VHOHsUtW7tJ3v0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -15,8 +51,44 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RunManager" selected="Application.Solution_1284">
+    <configuration name="Solution_1284" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="D2.Solution_1284" />
+      <module name="Algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="D2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Solution_1945" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="D2.Solution_1945" />
+      <module name="Algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="D2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Solution_1284" />
+        <item itemvalue="Application.Solution_1945" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -28,7 +100,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579651692973</updated>
-      <workItem from="1579651694772" duration="241000" />
+      <workItem from="1579651694772" duration="1152000" />
+      <workItem from="1579653068901" duration="5663000" />
     </task>
     <servers />
   </component>
@@ -36,6 +109,26 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1579667396976">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1579667396976" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1579667396976">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1579667396976" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1579667396976">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1579667396976" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1579667396976">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579667396976" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1579659204183">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1579659204183" />
     <state x="657" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1579651695771">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
