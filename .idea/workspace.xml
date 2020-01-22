@@ -2,28 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5797b994-c570-4d8b-8bcb-46225c6d5ca8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/D2/Solution_1284.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/D2/Solution_1288.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/D2/Solution_1945.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/D2/Solution_1986.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Soltuion_1933.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/D1/Soltuion_1933.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Solution_1545.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/D1/Solution_1545.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Solution_1938.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/D1/Solution_1938.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Solution_2025.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/D1/Solution_2025.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Solution_2027.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/D1/Solution_2027.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Solution_2043.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/D1/Solution_2043.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Solution_2046.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/D1/Solution_2046.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Solution_2047.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/D1/Solution_2047.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Solution_2050.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/D1/Solution_2050.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Solution_2058.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/D1/Solution_2058.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Solution_2063.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/D1/Solution_2063.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Solution_2068.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/D1/Solution_2068.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Solution_2070.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/D1/Solution_2070.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Solution_2071.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/D1/Solution_2071.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Solution_2072.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/D1/Solution_2072.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/D2/Solution_1288.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/D2/Solution_1288.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +81,7 @@
       <option name="presentableId" value="Default" />
       <updated>1579651692973</updated>
       <workItem from="1579651694772" duration="1152000" />
-      <workItem from="1579653068901" duration="5663000" />
+      <workItem from="1579653068901" duration="8872000" />
     </task>
     <servers />
   </component>
