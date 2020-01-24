@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5797b994-c570-4d8b-8bcb-46225c6d5ca8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/D2/Solution_1989.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/D2/Solution_1288.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/D2/Solution_1288.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ladder1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ladder1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/alphaTest2.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +39,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
@@ -91,6 +91,18 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -105,6 +117,7 @@
       <workItem from="1579653068901" duration="8949000" />
       <workItem from="1579739026830" duration="2152000" />
       <workItem from="1579753027319" duration="4022000" />
+      <workItem from="1579867880996" duration="86000" />
     </task>
     <servers />
   </component>
@@ -112,6 +125,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1579867901263">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/-1920.-79.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1579867901263" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1579757969278">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

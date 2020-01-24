@@ -9,9 +9,8 @@ public class Ladder1 {
 		for(int test_case = 1; test_case <= T; test_case++) {
 			int[][] input = new int[100][100];
 			int a = sc.nextInt();
-			int x=0;						//출구의 위치를 받을 좌표값
-			
-			//초기 배열값 할당
+			int x=0;			
+
 			for(int i=0; i<100; i++)					
 			{
 				for(int j=0; j<100; j++) 
@@ -19,8 +18,7 @@ public class Ladder1 {
 					input[i][j] = sc.nextInt();
 				}
 			}
-			
-			//출구의 위치를 찾아보자. y좌표는 99이다.
+
 			for(int i=0; i<100; i++)
 			{
 					if(input[i][99] == 2)
