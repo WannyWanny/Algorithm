@@ -1,9 +1,9 @@
 package D4;
 
-        import java.util.Scanner;
-        import java.util.Stack;
+import java.util.Scanner;
+import java.util.Stack;
 
-public class Solution_1223 {
+public class Solution_1224 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         for (int tc = 1; tc <= 10; tc++) {
@@ -23,16 +23,25 @@ public class Solution_1223 {
                         stack.push(c);
                     }
                     else if(c == '+'){
-                        while(!stack.isEmpty()){
+                        while(!stack.isEmpty() && stack.peek() !='('){
                             sb.append(stack.pop());
                         }
                         stack.push(c);
                     }
                     else if(c == '*'){
-                        while(!stack.isEmpty() && stack.peek() != '+'){
+                        while(!stack.isEmpty() && stack.peek() != '+' && stack.peek() !='('){
                             sb.append(stack.pop());
                         }
                         stack.push(c);
+                    } else if(c == '('){
+                        stack.push(c);
+                    }
+                    else if(c == ')'){
+                        char top = stack.pop();
+                        while(!stack.isEmpty() && top != '('){
+                            sb.append(top);
+                            top = stack.pop();
+                        }
                     }
                 }
             }

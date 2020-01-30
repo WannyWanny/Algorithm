@@ -37,8 +37,7 @@ public class Ladder1 {
 			System.out.println("#"+test_case+" "+(x-1));
 		}
 	}
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> eb69060ec49719f1ae9ec71a5bc5b094c4e5eb9d
+
+
