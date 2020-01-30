@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Stack;
 
-public class Solution {
+public class Solution_1223 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         for (int tc = 1; tc <= 10; tc++) {
