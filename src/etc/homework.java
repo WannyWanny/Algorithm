@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class homework {
 	static int T;
 	public static void main(String[] args) throws FileNotFoundException {
-		System.setIn(new FileInputStream("항공기지 건설 input.txt"));
+		System.setIn(new FileInputStream("etc/항공기지 건설 input.txt"));
 		Scanner sc = new Scanner(System.in);
 		T = sc.nextInt();
 		for(int tc=1; tc<=T; tc++) {
