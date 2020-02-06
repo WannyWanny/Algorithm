@@ -22,16 +22,17 @@ public class Solution_1946 {
             int cnt=0;
 
             for(int i=0; i<n; i++){
-                cnt=0;
                 for(int j=0; j<arr[i]; j++){
                     System.out.print(alp[i]);
                     cnt++;
                     if (cnt == 10) {
                         System.out.println();
+                        cnt=0;
                         continue;
                     }
                 }
             }
+            System.out.println();
         }
     }
 }
