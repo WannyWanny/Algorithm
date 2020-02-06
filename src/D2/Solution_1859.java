@@ -9,26 +9,32 @@ public class Solution_1859 {
         for(int tc=1; tc<=T; tc++){
             int N = sc.nextInt();
             int[] arr = new int[N];
-            long ans=0;
-            int sum=0;
-            int pos;
-            int max=Integer.MIN_VALUE;
+            long sum=0;
+            int max=arr[0];
             for(int i=0; i<arr.length; i++){
                 arr[i] = sc.nextInt();
             }
 
-            for(int i=0; i<arr.length; i++){
-                max = Math.max(max, arr[i]);
-                if(arr[i] == max){
-                    pos = i;
-                    if(pos==0) break;
-                    for(int j=0; j<pos; j++){
-                        sum += arr[j];
-                    }
-                    
-                }
-            }
+            int s_Idx=0;      //시작지점
+            int m_Idx=0;      //최댓값지점
 
+            //1 1 3 1 2
+            while(s_Idx < arr.length){
+                //max인덱스 찾자
+               for(int i=s_Idx; i<arr.length; i++) {
+                   if (max < arr[i]) {
+                       max = arr[i];
+                       m_Idx = i;
+                   }
+               }
+               for(int j=s_Idx; j<m_Idx; j++){
+                   sum += max - arr[j];
+               }
+               s_Idx = m_Idx+1;
+               max=-1;
+            }//EOW
+
+            System.out.println("#"+tc+" "+sum);
         }//end of test
     }
 }
