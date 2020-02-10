@@ -9,32 +9,23 @@ public class Solution_1220 {
         for (int tc = 1; tc <= 10; tc++) {
             ans = 0;
             int N = sc.nextInt();
-            int[][] input = new int[N+1][N+1];
+            int[][] input = new int[N][N];
 
             for (int r = 0; r < N; r++) {
                 for (int c = 0; c < N; c++) {
                     input[r][c] = sc.nextInt();
                 }
             }                               //1 N, 2 S
-            int[] nCnt = new int[N];
-            int[] sCnt = new int[N];
-
-            //예외처리
-            for (int y = 0; y < N; y++) {
-                if(input[0][y] == 2){
-                    input[0][y] = 0;
-                }else if(input[N-1][y] ==1){
-                    input[N-1][y] = 0;
-                }
-            }
 
             for(int c=0; c<N; c++){
+                int cnt=0;
                 for(int r=0; r<N; r++){
-                    if(input[r][c] == 1){
-                        nCnt[c]++;
-                        for(int k=r+1; k<N; k++){
-
-                        }
+                    if(input[r][c] == 2 && cnt == 1){
+                        ans++;
+                        cnt=0;
+                    }
+                    else if(input[r][c] ==1 && cnt==0){
+                        cnt++;
                     }
                 }
             }
