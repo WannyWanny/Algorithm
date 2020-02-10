@@ -3,19 +3,44 @@ package D3;
 import java.util.Scanner;
 
 public class Solution_1220 {
+    static int ans;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        for(int tc=1; tc<=10; tc++){
+        for (int tc = 1; tc <= 10; tc++) {
+            ans = 0;
             int N = sc.nextInt();
-            int[][] input = new int[N][N];
+            int[][] input = new int[N+1][N+1];
 
-            for(int r=0; r<N; r++){
-                for(int c=0; c<N; c++){
+            for (int r = 0; r < N; r++) {
+                for (int c = 0; c < N; c++) {
                     input[r][c] = sc.nextInt();
                 }
             }                               //1 N, 2 S
+            int[] nCnt = new int[N];
+            int[] sCnt = new int[N];
 
+            //예외처리
+            for (int y = 0; y < N; y++) {
+                if(input[0][y] == 2){
+                    input[0][y] = 0;
+                }else if(input[N-1][y] ==1){
+                    input[N-1][y] = 0;
+                }
+            }
 
+            for(int c=0; c<N; c++){
+                for(int r=0; r<N; r++){
+                    if(input[r][c] == 1){
+                        nCnt[c]++;
+                        for(int k=r+1; k<N; k++){
+
+                        }
+                    }
+                }
+            }
+
+            System.out.println("#" + tc + " " + ans);
         }//end of test
     }
+
 }
