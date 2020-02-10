@@ -1,12 +1,13 @@
 package D3;
-import java.util.Arrays;
+
 import java.util.Scanner;
 
 public class Solution_6808 {
+    static final int MAX = 362880;
     static int[] Acards;
     static int[] Bcards;
-    static boolean[] visitedCard = new boolean[19];
 
+    static int cnt;
     static int[] result = new int[9];
     static boolean[] visited = new boolean[9];
 
@@ -17,36 +18,53 @@ public class Solution_6808 {
         Bcards = new int[9];
         for(int tc=1; tc<=T; tc++){
 
+            boolean[] visitedCard = new boolean[18];
             for(int i=0; i<9; i++){
                 Acards[i] = sc.nextInt();
-                visitedCard[Acards[i]] = true;
+                visitedCard[Acards[i]-1] = true;
             }
-            System.out.println(Arrays.toString(visitedCard));
+            cnt=0;
 
-            for(int i=0; i<9;i++){
-                if(visitedCard[Acards[i]] == true) continue;
-
+            for(int i=0; i<18;i++){
+                if(visitedCard[i] == true) continue;
+                Bcards[cnt]=i+1;
+                cnt++;
             }
-            System.out.println(Arrays.toString(Bcards));
 
-            //perm(0);
-
+            cnt=0;
+            perm(0);
+            System.out.println("#"+tc+" "+cnt+" "+(MAX-cnt));
         }//end of test
     }
 
     private static void perm(int idx){
-        if(idx == result.length){
+        if(idx >= 9){
+            Calc();
             return;
         }
 
         for(int i=0; i<Acards.length; i++){
             if(!visited[i]){
                 visited[i] = true;
-                result[idx] = i;
+                result[idx] = Bcards[i];
                 perm(idx+1);
                 visited[i] = false;
             }
         }
 
+    }
+    private static void Calc(){
+        int aSum=0;
+        int bSum=0;
+
+        for(int i=0; i< Acards.length; i++){
+            if(Acards[i] > result[i])
+               aSum += Acards[i] + result[i];
+            else
+                bSum += Acards[i] + result[i];
+        }
+
+        if(aSum > bSum)
+            ++cnt;
     }
 }
