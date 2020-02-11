@@ -9,48 +9,22 @@ public class Solution_2805 {
         int T = sc.nextInt();
         for(int tc=1; tc<=T; tc++){
             N = sc.nextInt();
-            int[][] map = new int[N][N];
-
-            for(int r=0; r<N; r++){
-                for(int c=0; c<N; c++){
-                    map[r][c] = sc.nextInt();
-                }
-            }
-
-            for(int r=0; r<N; r++){
-                for(int c=0; c<N; c++){
-                    System.out.print(map[r][c]+" ");
-                }
-                System.out.println();
-            }
-
-            int s = N/2;
             int sum=0;
-            int K=1;
-            for(int r=0; r<N; r++){
-                for(int c=0; c<K; c++){
-                    sum += map[r][s];
-                    s -=2;
-                }
-                K+=2;
-                if(K == N){
-                    for(int c=K; c>0; c--){
-                        sum += map[r][s];
-                        s += 2;
-                    }
-                    K -=2;
+
+            for(int i=N/2; i>=0; i--){
+                String str = sc.next();
+                for(int j=i; j<N-i; j++){
+                    sum += str.charAt(j)-'0';
                 }
             }
+            for(int i=1; i<=N/2; i++){
+                String str = sc.next();
+                for(int j=i; j<N-i; j++){
+                    sum += str.charAt(j)-'0';
+                }
+            }
+
             System.out.println("#"+tc+" "+sum);
         }//end of test
     }
 }
-
-/*
-        1
-        5
-        1 4 0 5 4
-        4 4 2 5 0
-        0 2 0 3 2
-        5 1 2 0 4
-        5 2 2 1 2 */
