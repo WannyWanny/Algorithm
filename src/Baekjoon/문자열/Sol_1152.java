@@ -1,4 +1,3 @@
-package 문자열;
 
 import java.util.Scanner;
 public class Sol_1152 {

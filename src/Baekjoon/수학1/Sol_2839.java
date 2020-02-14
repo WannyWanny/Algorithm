@@ -1,4 +1,4 @@
-package 수학1;
+
 
 import java.util.Scanner;
 

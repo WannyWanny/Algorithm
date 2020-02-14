@@ -1,4 +1,4 @@
-package 문자열;
+
 
 import java.util.*;
 public class Sol_2675 {
