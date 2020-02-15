@@ -1,4 +1,3 @@
-package 브루트_포스;
 
 import java.util.Scanner;
 public class Sol_1436 {

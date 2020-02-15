@@ -1,8 +1,5 @@
-<<<<<<< HEAD:src/D4/Solution_1225.java
-package D4;
-=======
+
 package SWExpertAcademy.D3;
->>>>>>> 6fb9bba7aedc3f96fcf68890ec38d55e3bafb3e9:src/SWExpertAcademy/D3/Solution_1225.java
 
 import java.util.LinkedList;
 import java.util.Queue;

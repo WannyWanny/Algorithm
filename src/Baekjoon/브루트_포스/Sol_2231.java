@@ -1,4 +1,4 @@
-package 브루트_포스;
+
 import java.util.*;
 public class Sol_2231 {
     public static void main(String[] args) {

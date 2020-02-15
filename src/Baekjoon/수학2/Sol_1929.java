@@ -1,4 +1,4 @@
-package 수학2;
+
 import java.io.*;
 import java.util.StringTokenizer;
 

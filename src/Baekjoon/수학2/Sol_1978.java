@@ -1,4 +1,4 @@
-package 수학2;
+
 import java.util.Scanner;
 public class Sol_1978 {
     public static void main(String[] args) {

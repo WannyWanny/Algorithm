@@ -1,4 +1,3 @@
-package 함수;
 
 import java.util.*;
 
