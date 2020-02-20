@@ -13,32 +13,24 @@ public class Solution_5515 {
             m = sc.nextInt();
             d = sc.nextInt();
             int today = 4;
+            int day=0;
             switch(m){
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    break;
-                case 5:
-                    break;
-                case 6:
-                    break;
-                case 7:
-                    break;
-                case 8:
-                    break;
-                case 9:
-                    break;
-                case 10:
-                    break;
-                case 11:
-                    break;
-                case 12:
-                    break;
+                case 12:day+=30;
+                case 11:day+=31;
+                case 10:day+=30;
+                case 9:day+=31;
+                case 8:day+=31;
+                case 7:day+=30;
+                case 6:day+=31;
+                case 5:day+=30;
+                case 4:day+=31;
+                case 3:day+=29;
+                case 2:day+=31;
+                default:break;
             }
+            day += today+d-1;
+            day %=7;
+            System.out.println("#"+tc+" "+day);
         }
     }
 }
