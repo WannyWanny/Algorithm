@@ -13,16 +13,17 @@ public class Solution_5162 {
             a = sc.nextInt();
             b = sc.nextInt();
             c = sc.nextInt();
+            int d=0;
             Ans=0;
             if(a<b){
                 Ans += c/a;
-                c /=a;
-                Ans += c/b;
+                d = c - Ans*a;
+                Ans += d/b;
             }
             else{
                 Ans += c/b;
-                c /=b;
-                Ans += c/a;
+                d = c - Ans*b;
+                Ans += d/a;
             }
 
             System.out.println("#"+tc+" "+Ans);
