@@ -22,6 +22,29 @@ public class Solution_6900 {
                 _lotto[i] = sc.next();
             }
 
+            for(int i=0; i<n; i++) {
+                for (int i2 = 0; i2 < m; i2++) {
+                    boolean flag = false;
+                    for (int j = 0; j < lotto[i].length(); j++) {
+                        char[] ch, ch2;
+                        ch = lotto[i].toCharArray();
+                        ch2 = _lotto[i2].toCharArray();
+                        if (ch[j] == '*'){
+                            flag = true;
+                            continue;
+                        }
+                        else if (ch2[j] == ch[j]) {
+                            flag = true;
+                        } else {
+                            flag = false;
+                            break;
+                        }
+                    }
+                    if (flag) sum += money[i];
+                }
+            }
+
+            System.out.println("#"+tc+" "+sum);
 
         }
     }
