@@ -1,5 +1,4 @@
 package SWExpertAcademy.D5;
-
 import java.util.Scanner;
 
 public class Solution_2115 {
@@ -42,14 +41,14 @@ public class Solution_2115 {
         if(sum > c) return;
         if(cnt == m){
             if(maxMap[r][c-m]<powSum){
-                 maxMap[r][c-m] = powSum;
+                maxMap[r][c-m] = powSum;
             }
             return;
         }
 
         //선택
         makeMaxSubset(r, c+1, cnt+1,
-                sum+map[r][c], powSum+map[r][c]*map[r][c]);
+                sum+map[r][c], powSum+(map[r][c]*map[r][c]));
         //비선택
         makeMaxSubset(r, c+1, cnt+1, sum, powSum);
     }
@@ -61,12 +60,12 @@ public class Solution_2115 {
             for(int c=0; c<=n-m; c++){
                 //2. 일꾼B 선택
                 //같은 행기준 선택
-                for(int c2=c+m; c<=n-m; c2++){
+                for(int c2=c+m; c2<=n-m; c2++){
                     temp = maxMap[r][c]+maxMap[r][c2];
                     if(max<temp) max = temp;
                 }
                 //다음행부터 마지막행까지 선택
-                for(int r2=r+1; c<n; r2++){
+                for(int r2=r+1; r2<n; r2++){
                     for(int c2 =0; c2<=n-m; c2++){
                         temp = maxMap[r][c]+maxMap[r2][c2];
                         if(max<temp) max = temp;
