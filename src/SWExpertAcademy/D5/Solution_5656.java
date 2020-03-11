@@ -1,6 +1,5 @@
 package SWExpertAcademy.D5;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Solution_5656 {
@@ -19,35 +18,86 @@ public class Solution_5656 {
             R = sc.nextInt();
             map = new int[R][C];
             visited = new boolean[R][C];
-            Ans=0;
+            Ans=Integer.MAX_VALUE;
             for(int r=0; r<R; r++){
                 for(int c=0; c<C; c++){
                     map[r][c] =sc.nextInt();
                 }
             }
 
-            printMap(map);
+            dfs(map, N);
+            System.out.println("#"+tc+" "+Ans);
 
         }
     }
 
-    private static void printMap(int[][] arr){
-        for(int r=0; r<R; r++){
-            for(int c=0; c<C; c++){
-                System.out.print(arr[r][c]+" ");
+    private static void deepCopy(int[][] origin, int[][] copy){
+        for(int i=0; i<origin.length; i++){
+            for(int j=0; j<origin[i].length; j++){
+                copy[i][j] = origin[i][j];
             }
-            System.out.println();
         }
     }
 
-    private static void breakBrick(int r, int cnt, int[][] map){
-        if(r==0){
-
+    private static void dfs(int[][] map, int n){
+        if(n==0){
+            Ans = Math.min(Ans, getCount(map));
             return;
         }
-        for(int c=0; c<C; c++){
-            breakBrick(r, cnt, map);
+
+        for(int j=0; j<map[0].length; j++){
+            int[][] tmp = new int[map.length][map[0].length];
+            deepCopy(map, tmp);
+
+            for(int i=0; i<tmp.length; i++){
+                if(tmp[i][j] !=0){
+                    breakBrick(tmp, i, j);
+                    break;
+                }
+            }
+            gravity(tmp);
+            dfs(tmp, n-1);
         }
+    }
+
+    private static void breakBrick(int[][] map, int r, int c){
+        if(!isIn(r, c)) return;
+
+        int power = map[r][c];
+        map[r][c]=0;
+        for(int i=1; i<power; i++){
+            for(int k=0; k<4; k++){
+                int nc = c+dc[k]*i;
+                int nr = r+dr[k]*i;
+                breakBrick(map, nr, nc);
+            }
+        }
+    }
+
+    private static void gravity(int[][] map){
+        for(int i=map.length-1; i>=0; i--){
+            for(int j=0; j<map[i].length; j++){
+                if(map[i][j]==0){
+                    for(int k=i; k>=0; k--){
+                        if(map[k][j] !=0){
+                            map[i][j] = map[k][j];
+                            map[k][j]=0;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private static int getCount(int[][] map){
+        int cnt=0;
+        for(int i=0; i<map.length; i++){
+            for(int j=0; j<map[i].length; j++){
+                if(map[i][j] !=0) cnt++;
+            }
+        }
+        return cnt;
     }
 
     private static boolean isIn(int r, int c){
