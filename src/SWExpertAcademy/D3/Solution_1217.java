@@ -14,7 +14,6 @@ public class Solution_1217 {
             System.out.println("#"+tc+" "+Func(a, b));
         }
     }
-
     private static int Func(int x, int y){
         if(y==1)
             return x;
