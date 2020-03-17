@@ -1,4 +1,4 @@
-package Baekjoon;
+package Baekjoon.기타;
 
 import java.util.Arrays;
 import java.util.Comparator;

@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Solution_1868 {
     static int T, N;
     static char[][] map;
+    static int[][] bomb;
     static boolean[][] visited;
     static int[] dr={-1, -1, -1, 0, 1, 1, 1, 0};
     static int[] dc={-1, 0, 1, 1, 1, 0, -1, -1};
@@ -15,6 +16,7 @@ public class Solution_1868 {
         for(int tc=1; tc<=T; tc++){
             N = sc.nextInt();
             map = new char[N][N];
+            bomb = new int[N][N];
             visited = new boolean[N][N];
             Ans = Integer.MAX_VALUE;
             for(int r=0; r<N; r++){
@@ -34,16 +36,9 @@ public class Solution_1868 {
             int nc=c+dc[k];
             int nr=r+dr[k];
             if(!isIn(nr, nc)) continue;
-
-        }
-    }
-
-    private static void printMap(){
-        for(int r=0; r<N; r++){
-            for(int c=0; c<N; c++){
-                System.out.print(map[r][c]+" ");
+            if(map[nr][nc] == '*'){
+                bomb[nr][nc]++;
             }
-            System.out.println();
         }
     }
 
