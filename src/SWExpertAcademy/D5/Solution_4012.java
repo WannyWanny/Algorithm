@@ -1,13 +1,10 @@
 package SWExpertAcademy.D5;
-
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Solution_4012 {
     static int T, N;
     static int[][] map;
-    static int[] arr;
-    static int[] sel;
+    static boolean[] visited;
     static int ans;
 
     public static void main(String[] args) {
@@ -16,17 +13,13 @@ public class Solution_4012 {
         for(int tc=1; tc<=T; tc++){
             N = sc.nextInt();
             map = new int[N][N];
-            sel = new int[N/2];
-            arr = new int[N];
             ans = Integer.MAX_VALUE;
             for(int r=0; r<N; r++){
                 for(int c=0; c<N; c++){
                     map[r][c] = sc.nextInt();
                 }
             }
-            for(int i=0; i<N; i++){
-                arr[i] = i;
-            }
+            visited = new boolean[N];
 
             Comb(0, 0);
 
@@ -34,27 +27,28 @@ public class Solution_4012 {
         }
     }
 
-    private static void Comb(int idx, int s_idx){
-        if(s_idx == sel.length){
-            System.out.println(Arrays.toString(sel));
-            getSum(sel);
+    private static void Comb(int cnt, int idx){
+        if(idx >=N)
+            return;
+        if(cnt==N/2){
+            int sum1=0;
+            int sum2=0;
+            for(int i=0; i<N; i++){
+                for(int j=i+1; j<N; j++){
+                    if(visited[i] != visited[j]) continue;
+                    if(visited[i]) sum1+=map[i][j]+map[j][i];
+                    else           sum2+=map[i][j]+map[j][i];
+                }
+            }
+            ans = Math.min(ans, Math.abs(sum1-sum2));
             return;
         }
-        if(idx == arr.length)
-            return;
 
-        sel[s_idx] = arr[idx];
-        Comb(idx+1, s_idx+1);
-        Comb(idx+1, s_idx);
+        for(int i=idx; i<N; i++){
+            visited[i]=true;
+            Comb(cnt+1, i+1);
+            visited[i]=false;
+        }
     }
 
-    private static void getSum(int[] input){
-        int n1=0;
-
-
-        int n2 = map[N-1-input[0]][N-1-input[1]]+map[N-1-input[1]][N-1-input[0]];
-        int sum = Math.abs(n1-n2);
-        System.out.println(sum);
-        ans = Math.min(sum, ans);
-    }
 }
