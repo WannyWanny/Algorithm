@@ -1,4 +1,5 @@
-package DP1;
+package Baekjoon.DP1;
+
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
