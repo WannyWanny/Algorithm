@@ -1,4 +1,6 @@
 package SWExpertAcademy.D5;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Solution_4012 {
@@ -22,7 +24,7 @@ public class Solution_4012 {
             visited = new boolean[N];
 
             Comb(0, 0);
-
+            HashMap map = new HashMap();
             System.out.println("#"+tc+" "+ans);
         }
     }
