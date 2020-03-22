@@ -1,6 +1,8 @@
 package Baekjoon.백트래킹;
 
+import java.io.*;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class Main_14889 {
     static int N;
@@ -8,19 +10,26 @@ public class Main_14889 {
     static boolean[] visited;
     static int ans;
 
-    public static void main(String[] args) {
-        Scanner sc =new Scanner(System.in);
-        N = sc.nextInt();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        N = Integer.parseInt(br.readLine());
         map = new int[N][N];
         for(int r=0; r<N; r++){
+            StringTokenizer st = new StringTokenizer(br.readLine());
             for(int c=0; c<N; c++){
-                map[r][c] = sc.nextInt();
+                map[r][c] = Integer.parseInt(st.nextToken());
             }
         }
         visited = new boolean[N];
         ans = Integer.MAX_VALUE;
         DFS(0, 0);
         System.out.println(ans);
+
+        br.close();
+        bw.flush();
+        bw.close();
     }
 
     private static void DFS(int cnt, int idx) {
