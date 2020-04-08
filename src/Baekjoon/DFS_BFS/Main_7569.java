@@ -48,8 +48,7 @@ public class Main_7569 {
         }
 
         while(!qu.isEmpty()){
-            Point front = qu.poll();
-
+            Point front = qu.poll();            //값 추출
             for(int k=0; k<6; k++){
                 int nx = front.x+dx[k];
                 int ny = front.y+dy[k];
