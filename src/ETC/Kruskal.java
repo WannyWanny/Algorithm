@@ -19,6 +19,8 @@ public class Kruskal {
             edges[i][1] = sc.nextInt();
             edges[i][2] = sc.nextInt();
         }
+        parents = new int[10000];
+        rank = new int[10000];
         //간선들을 가중치 오름차순으로 정렬
         Arrays.sort(edges, new Comparator<int[]>() {
             @Override
@@ -45,6 +47,7 @@ public class Kruskal {
                 break;
             }
         }
+        System.out.println(result);
 
     }
 
