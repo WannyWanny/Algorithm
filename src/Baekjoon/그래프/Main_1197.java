@@ -39,7 +39,6 @@ public class Main_1197 {
             cnt++;
             if(cnt == V-1) break;
         }
-
         System.out.println(result);
     }
 
