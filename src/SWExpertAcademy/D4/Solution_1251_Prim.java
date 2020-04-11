@@ -1,65 +1,50 @@
 package SWExpertAcademy.D4;
 
-import java.util.PriorityQueue;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Solution_1251_Prim {
-    static class Edges implements Comparable<Edges>{
-        int idx;
-        long cost;
-
-        public Edges(int idx, long cost) {
-            this.idx = idx;
-            this.cost = cost;
-        }
-
-        @Override
-        public int compareTo(Edges o){
-            return Long.compare(this.cost, o.cost);
-        }
-    }
-    static int N;
-    static int[][] islands;
-    static double E;
-    static long[][] dist;
-
     public static void main(String[] args) {
-        Scanner sc= new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
-        for(int tc=1; tc<=T; tc++){
-            N = sc.nextInt();
+        for (int tc = 1; tc <= T; tc++) {
+            int n = sc.nextInt();
+            int[][] islands= new int[n][2];
+            for(int i=0; i<n; i++){
+                islands[i][0] = sc.nextInt();
+            }
+            for(int i=0; i<n; i++){
+                islands[i][1] = sc.nextInt();
+            }
+            double e = sc.nextDouble();
+            long[] dist = new long[n];
+            boolean[] visited = new boolean[n];
+            Arrays.fill(dist, Long.MAX_VALUE);
 
-            islands = new int[N][2];
-            for(int i=0; i<N; i++) islands[i][0] = sc.nextInt();
-            for(int i=0; i<N; i++) islands[i][1] = sc.nextInt();
-            E = sc.nextDouble();
+            int cur=0, next=0;
+            dist[0]=0;
+            for(int i=0; i<n-1; i++){
+                long min = Long.MAX_VALUE;
+                cur=next;
+                visited[cur] = true;
 
-            dist = new long[N][N];
-            int[] from;
-            int[] to;
-            for(int i=0; i<N; i++){
-                from = islands[i];
-                for(int j=i+1; j<N; j++){
-                    to = islands[j];
-                    dist[j][i] = dist[i][j] = (from[0]-to[0])*(from[0]-to[0])+(from[1]-to[1])*(from[1]-to[1]);
+                for(int j=0; j<n; j++){
+                    if(visited[j]) continue;
+                    long tmp = (long)Math.pow(islands[cur][0]-islands[j][0], 2)+
+                            (long)Math.pow(islands[cur][1]-islands[j][1], 2);
+                    if(tmp < dist[j]) dist[j] = tmp;
+                    if(min > dist[j]){
+                        min =dist[j];
+                        next = j;
+                    }
                 }
             }
-            double cost = prim(0)*E;
-            System.out.println("#"+tc+" "+Math.round(cost));
+
+            long ans=0;
+            for(int i=0; i<n; i++){
+                ans+= dist[i];
+            }
+            System.out.println("#"+tc+" "+Math.round(ans*e));
         }
-    }
-
-    private static long prim(int start){
-        long cost=0;
-        PriorityQueue<Edges> pq = new PriorityQueue<>();
-        Edges[] graph = new Edges[N];
-
-        for(int i=0; i<graph.length; i++){
-            graph[i] = new Edges(i, Long.MAX_VALUE);
-            pq.add(graph[i]);
-        }
-
-        graph[start].cost = 0;
-        return cost;
     }
 }
