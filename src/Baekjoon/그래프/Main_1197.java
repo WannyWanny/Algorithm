@@ -1,52 +1,72 @@
 package Baekjoon.그래프;
 
-import java.util.Arrays;
-import java.util.Comparator;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Main_1197 {
+    static class Edge implements Comparable<Edge>{
+        int v1;
+        int v2;
+        int cost;
+
+        public Edge(int v1, int v2, int cost) {
+            this.v1 = v1;
+            this.v2 = v2;
+            this.cost = cost;
+        }
+        @Override
+        public int compareTo(Edge o){
+            if(this.cost < o.cost)
+                return -1;
+            else if(this.cost == o.cost)
+                return 0;
+            else
+                return 1;
+        }
+    }
     static int[] parents;
-    static int[] rank;
+    static int[] ranks;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int V = sc.nextInt();
         int E = sc.nextInt();
-        int[][] edges = new int[E][3];
-        parents =new int[100000];
-        rank = new int[10000];
 
+        ArrayList<Edge> edgelist = new ArrayList<Edge>();
         for(int i=0; i<E; i++){
-            edges[i][0] = sc.nextInt();
-            edges[i][1] = sc.nextInt();
-            edges[i][2] = sc.nextInt();
+            int v1 = sc.nextInt();
+            int v2 = sc.nextInt();
+            int cost = sc.nextInt();
+            edgelist.add(new Edge(v1, v2, cost));
         }
-        Arrays.sort(edges, new Comparator<int[]>(){
-            @Override
-            public int compare(int[] t1, int[] t2) {
-                return Integer.compare(t1[2], t2[2]);
-            }
-        });
 
-        for(int i=0; i<V; i++) makeSet(i);
+        parents = new int[V+1];
+        ranks = new int[V+1];
+        for(int i=0; i<V; i++){
+            makeSet(i);
+        }
+        Collections.sort(edgelist);
+        int sum=0;
         int cnt=0;
-        int result=0;
         for(int i=0; i<V-1; i++){
-            int a = findSet(edges[i][0]);
-            int b = findSet(edges[i][1]);
-            if(a == b) continue;
+            Edge node = edgelist.get(i);
+            int a = node.v1;
+            int b = node.v2;
+            if(a==b) continue;
+            sum += node.cost;
             union(a, b);
-            result += edges[i][2];
             cnt++;
             if(cnt == V-1) break;
         }
-        System.out.println(result);
+        System.out.println(sum);
+
     }
 
-    static void makeSet(int x){
+    private static void makeSet(int x){
         parents[x] = x;
     }
 
-    static int findSet(int x){
+    private static int findSet(int x){
         if(x == parents[x])
             return x;
         else{
@@ -54,14 +74,14 @@ public class Main_1197 {
         }
     }
 
-    static void union(int a, int b){
-        int pa = findSet(a);
-        int pb = findSet(b);
-        if(rank[pa] > rank[pb]){
-            parents[pb] = pa;
+    private static void union(int x, int y){
+        int px = findSet(x);
+        int py = findSet(y);
+        if(ranks[px] > ranks[py]){
+            parents[py] = px;
         }else{
-            parents[pa] = pb;
-            if(rank[pa] == rank[pb]) rank[pb] ++;
+            parents[px] = py;
+            if(ranks[px] == ranks[py]) ranks[px]++;
         }
     }
 }
