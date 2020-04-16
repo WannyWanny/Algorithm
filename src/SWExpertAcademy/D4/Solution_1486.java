@@ -22,7 +22,9 @@ public class Solution_1486 {
                         res += arr[j];
                     }
                 }
-                min = Math.min(Math.abs(b-res), min);
+                if(res>=b){
+                    min = Math.min(res-b, min);
+                }
             }
 
             System.out.println("#"+tc+" "+min);
