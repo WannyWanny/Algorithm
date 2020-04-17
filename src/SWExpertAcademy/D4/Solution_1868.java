@@ -1,77 +1,73 @@
 package SWExpertAcademy.D4;
 
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
 public class Solution_1868 {
-    static int N;
-    static char[][] map;
-    static boolean[][] visited;
-    static int[] dr={-1, -1, -1, 0, 1, 1, 1, 0};
-    static int[] dc={-1, 0, 1, -1, 1, 0, -1, 1};
-    static int result;
-    public static void main(String[] args) {
-        Scanner sc =new Scanner(System.in);
-        int T = sc.nextInt();
+    public static int[] di={-1,-1, 0, 1, 1, 1, 0,-1};//상,우상,우,우하,하,좌하,좌,좌상
+    public static int[] dj={ 0, 1, 1, 1, 0,-1,-1,-1};
+    public static int N;
+    public static char[][] m;
+    public static boolean[][] v;
+
+
+    public static void main(String[] args) throws Exception{
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        int T=Integer.parseInt(br.readLine());
+
         for(int tc=1; tc<=T; tc++){
-            N = sc.nextInt();
-            map = new char[N][N];
-            visited =new boolean[N][N];
-            result=0;
-            for(int r=0; r<N; r++){
-                String str = sc.next();
-                for(int c=0; c<N; c++){
-                    map[r][c] = str.charAt(c);
+            N=Integer.parseInt(br.readLine());
+            m=new char[N][N];
+            v=new boolean[N][N];
+
+
+            for(int i=0; i<N; i++){
+                String s=br.readLine();
+                for(int j=0; j<N; j++){
+                    m[i][j]=s.charAt(j);
                 }
             }
 
-            for(int r=0; r<N; r++){
-                for(int c=0; c<N; c++){
-                    if(map[r][c]!='.')continue;
-                    if(map[r][c] == '.'){
-                        result++;
-                        DFS(r, c);
+            int ans=0;
+            for(int i=0; i<N; i++){
+                for(int j=0; j<N; j++){
+                    if(m[i][j]!='.') continue;
+                    if(count(i,j)==0){
+                        ans++;
+                        dfs(i,j);
                     }
                 }
             }
-
-            for(int r=0; r<N; r++){
-                for(int c=0; c<N; c++){
-                    if(map[r][c] =='.') result++;
+            for(int i=0; i<N; i++){
+                for(int j=0; j<N; j++){
+                    if(m[i][j]=='.') ans++;
                 }
             }
-
-            System.out.println("#"+tc+" "+result);
+            System.out.println("#"+tc+" "+ans);
         }
+        br.close();
     }
-
-    private static int check(int r, int c){
-        int mine = 0;
+    public static int count(int i,int j){
+        int mine=0;
         for(int d=0; d<8; d++){
-            int nr=r+dr[d];
-            int nc=c+dc[d];
-            if(Isin(nr, nc) && map[nr][nc] =='*') mine++;
+            int ni=i+di[d];
+            int nj=j+dj[d];
+            if(0<=ni&&ni<N && 0<=nj&&nj<N && m[ni][nj]=='*') mine++;
         }
         return mine;
     }
-
-    private static void DFS(int r, int c){
-        visited[r][c] = true;
-        int mine =  check(r, c);
-        map[r][c] = (char)(mine+'0');
+    public static void dfs(int i,int j){
+        v[i][j]=true;
+        int mine=count(i,j);
+        m[i][j]=(char)(mine+'0');
         if(mine!=0) return;
 
         for(int d=0; d<8; d++){
-            int nr = r+dr[d];
-            int nc = c+dc[d];
-            if(Isin(nr, nc)){
-                if(!visited[nr][nc] && map[nr][nc] =='.'){
-                    DFS(nr, nc);
-                }
+            int ni=i+di[d];
+            int nj=j+dj[d];
+            if(0<=ni&&ni<N && 0<=nj&&nj<N && m[ni][nj]=='.' && !v[ni][nj]) {
+                dfs(ni,nj);
             }
         }
-    }
-
-    private static boolean Isin(int r, int c){
-        return (r>=0 && r<N && c>=0 && c<N);
     }
 }
