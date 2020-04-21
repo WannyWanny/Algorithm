@@ -13,7 +13,6 @@ public class Solution_7854 {
             for(int i=1; i<=x; i++){
                 if((temp*10+i) % i==0) res++;
             }
-
             System.out.println("#"+tc+" "+res);
         }
 
