@@ -31,6 +31,7 @@ public class Main_16234 {
                 map[r][c] = sc.nextInt();
             }
         }
+
         while(true){
             visited = new boolean[N][N];
             if(!movePeople()){
