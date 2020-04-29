@@ -16,6 +16,7 @@ public class Main_13458 {
 
         for(int i=0; i<arr.length; i++){
             int temp = arr[i]-b;
+
             res++;
             if(temp<=0)continue;
             if(temp % c ==0){
