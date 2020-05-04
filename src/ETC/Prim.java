@@ -19,6 +19,7 @@ public class Prim {
             adj[b][a] = c;
         }
 
+
         boolean[] check = new boolean[V];
         int[] key = new int[V];         //현재 선택된 정점들로부터 도달할 수 있는 최소거리
         int[] p = new int[V];           //최소신장트리의 구조를 저장할 배열
