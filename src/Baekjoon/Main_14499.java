@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main_14499 {
     static int[][] map = new int[20][20];
     static int[] dice = new int[7];
-    static int[] dr={0, 0, -1, 1};                 //동 서 남 북
+    static int[] dr={0, 0, -1, 1};
     static int[] dc={1, -1, 0, 0};
 
     public static void main(String[] args)  {
