@@ -21,6 +21,7 @@ public class Main_1157 {
             else if(max == cnt[word.charAt(i) - 65])
                 answer = '?';
         }
+
         System.out.println(answer);
     }
 }
