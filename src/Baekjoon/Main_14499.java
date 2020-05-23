@@ -23,6 +23,7 @@ public class Main_14499 {
             }
         }
 
+
         for(int k=0; k<K; k++){
             int d= sc.nextInt();
             int nr = y+dr[d-1];
