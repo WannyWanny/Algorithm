@@ -59,6 +59,7 @@ public class Solution_1767 {
         Point cur = list.get(index);
         int r = cur.r;
         int c = cur.c;
+
 //        포함
         for(int d=0; d<4; d++){
 //           현 방향으로 전선을 놓는것이 가능한지 체크
