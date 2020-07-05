@@ -26,12 +26,11 @@ public class Main_17140 {
         }
 
         for(int i=0; i<100; i++){
-            if(getAns(arr)){
+            if(getAns(arr)) {
                 flag = true;
                 ans = i;
                 break;
             }
-            if()
         }
 
         if(flag)
