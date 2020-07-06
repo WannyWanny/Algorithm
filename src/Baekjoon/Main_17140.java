@@ -40,13 +40,6 @@ public class Main_17140 {
 
     }
 
-    private static void doR(int[][] temp){
-
-    }
-
-    private static void doC(int[][] temp){
-
-    }
 
     private static void printArr(int[][] temp){
         for(int r=0; r<temp.length; r++){
