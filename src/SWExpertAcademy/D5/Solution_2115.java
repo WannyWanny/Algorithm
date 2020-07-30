@@ -4,10 +4,11 @@ import java.util.Scanner;
 public class Solution_2115 {
     static int T, n, m, c;
     static int[][] map, maxMap;
-
+    
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         T = sc.nextInt();
+        System.out.println("깃 만져보는 중");
         for(int tc=1; tc<=T; tc++){
             n = sc.nextInt();
             m = sc.nextInt();
