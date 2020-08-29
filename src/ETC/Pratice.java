@@ -16,10 +16,10 @@ public class Pratice {
         RePermutation(new int[arr.length], 0);
 
         System.out.println("Combination");
-        Combination(new int[arr.length-1], 2, 1);
+        Combination(new int[arr.length-1], 0, 1);
 
         System.out.println("Recombination");
-        ReCombination(new int[arr.length-1], 2, 1);
+        ReCombination(new int[arr.length-1], 0, 1);
     }
 
     private static void ReCombination(int[] ans, int idx, int r){
