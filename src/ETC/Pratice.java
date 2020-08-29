@@ -3,45 +3,44 @@ package ETC;
 import java.util.Arrays;
 
 public class Pratice {
-    static int[] arr = {1, 2, 3};
+    static int[] arr = {1, 2, 3, 4};
     static boolean[] visited = new boolean[arr.length];
     public static void main(String[] args) {
-        System.out.println("Subset");
-        Subset(new boolean[arr.length], 0);
+//        System.out.println("Subset");
+//        Subset(new boolean[arr.length], 0);
 
-        System.out.println("Permutation");
-        Permutation(new int[arr.length], 0);
+//        System.out.println("Permutation");
+//        Permutation(new int[arr.length], 0);
 
-        System.out.println("RePermutation");
-        RePermutation(new int[arr.length], 0);
+//        System.out.println("RePermutation");
+//        RePermutation(new int[arr.length], 0);
 
         System.out.println("Combination");
-        Combination(new int[arr.length-1], 0, 1);
+        Combination(new int[arr.length-2], 0, 0);
 
-        System.out.println("Recombination");
-        ReCombination(new int[arr.length-1], 0, 1);
+//        System.out.println("Recombination");
+//        ReCombination(new int[arr.length-1], 0, 0);
     }
 
-    private static void ReCombination(int[] ans, int idx, int r){
-        if(r == ans.length){
+    private static void ReCombination(int[] ans, int idx, int r) {
+        if(r == ans.length) {
             System.out.println(Arrays.toString(ans));
             return;
         }
         if(idx == arr.length) return;
         ans[r] = arr[idx];
-        ReCombination(ans, idx+1, r);
         ReCombination(ans, idx, r+1);
+        ReCombination(ans, idx+1, r);
     }
-
-    private static void Combination(int[] ans, int idx, int r){
-        if(r == ans.length){
+    private static void Combination(int[] ans, int idx, int r) {
+        if(r == ans.length) {
             System.out.println(Arrays.toString(ans));
             return;
         }
-        if(idx == arr.length)return;
+        if(idx == arr.length) return;
         ans[r] = arr[idx];
+        Combination(ans, idx+1, r+1);
         Combination(ans, idx+1, r);
-        Combination(ans, idx, r+1);
     }
 
     private static void RePermutation(int[] ans, int idx){
