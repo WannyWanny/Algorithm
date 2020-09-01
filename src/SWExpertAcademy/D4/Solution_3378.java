@@ -14,7 +14,7 @@ public class Solution_3378 {
             Q = sc.nextInt();
 
             for(int p=0; p<P; p++){
-                checkRow(p, );
+//                checkRow(p, );
             }
         }
     }
