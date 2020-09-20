@@ -2,36 +2,26 @@ package ETC;
 
 import java.util.Arrays;
 
-public class Pratice {
-    static int[] arr = {1, 2, 3, 4};
+public class Practice {
+    static int[] arr = {1, 2, 3};
     static boolean[] visited = new boolean[arr.length];
     public static void main(String[] args) {
 //        System.out.println("Subset");
 //        Subset(new boolean[arr.length], 0);
 
-//        System.out.println("Permutation");
-//        Permutation(new int[arr.length], 0);
+        System.out.println("Permutation");
+        Permutation(new int[arr.length], 0);
 
 //        System.out.println("RePermutation");
 //        RePermutation(new int[arr.length], 0);
 
         System.out.println("Combination");
-        Combination(new int[arr.length-2], 0, 0);
+        Combination(new int[arr.length-1], 0, 0);
 
 //        System.out.println("Recombination");
 //        ReCombination(new int[arr.length-1], 0, 0);
     }
 
-    private static void ReCombination(int[] ans, int idx, int r) {
-        if(r == ans.length) {
-            System.out.println(Arrays.toString(ans));
-            return;
-        }
-        if(idx == arr.length) return;
-        ans[r] = arr[idx];
-        ReCombination(ans, idx, r+1);
-        ReCombination(ans, idx+1, r);
-    }
     private static void Combination(int[] ans, int idx, int r) {
         if(r == ans.length) {
             System.out.println(Arrays.toString(ans));
@@ -41,17 +31,6 @@ public class Pratice {
         ans[r] = arr[idx];
         Combination(ans, idx+1, r+1);
         Combination(ans, idx+1, r);
-    }
-
-    private static void RePermutation(int[] ans, int idx){
-        if(idx == ans.length){
-            System.out.println(Arrays.toString(ans));
-            return;
-        }
-        for(int i=0; i<ans.length; i++){
-            ans[idx] = arr[i];
-            RePermutation(ans, idx+1);
-        }
     }
 
     private static void Permutation(int[] ans, int idx){
