@@ -60,5 +60,8 @@ public class Practice {
         Subset(ans, idx+1);
         ans[idx] = false;
         Subset(ans, idx+1);
+
+        String temp;
+//        temp.charAt(1);
     }
 }
